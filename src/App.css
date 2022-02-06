@@ -1,4 +1,13 @@
-.App {
-  background-color: black;
-  color: white;
+.App header {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.App h1 {
+  font-size: 64px;
+}
+
+.App-footer {
+  text-align: center;
+  margin: 30px auto;
 }
