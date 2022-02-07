@@ -2,27 +2,22 @@ import React from "react";
 import "./Photos.css";
 
 export default function Photos(props) {
-  if (props.photos) {
+  if (props.data) {
     return (
-      <section className="Photos">
-        <div className="row">
-          {props.photos.map(function (photo, index) {
-            return (
-              <div className="col-4" key={index}>
-                <a href={photo.src.original} target="_blank" rel="noreferrer">
-                  <img
-                    src={photo.src.landscape}
-                    className="img-fluid"
-                    alt={photo.alt}
-                  />
-                </a>
-              </div>
-            );
-          })}
-        </div>
-      </section>
+      <div className="row photos">
+        {props.data.photos.map((photo, index) => {
+          return (
+            <div className="col-2" key={index}>
+              <img
+                src={photo.src.small}
+                alt={photo.alt}
+                className="img-fluid"
+              />
+            </div>
+          );
+        })}
+      </div>
     );
-  } else {
-    return null;
   }
+  return null;
 }
