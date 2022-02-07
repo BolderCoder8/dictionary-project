@@ -4,10 +4,10 @@ import "./Photos.css";
 export default function Photos(props) {
   if (props.data) {
     return (
-      <div className="row photos">
+      <div className="row">
         {props.data.photos.map((photo, index) => {
           return (
-            <div className="col-2" key={index}>
+            <div className="col-4" key={index}>
               <img
                 src={photo.src.small}
                 alt={photo.alt}
